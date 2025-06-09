@@ -7,223 +7,567 @@
     <title>綠棧道寵物旅館沙龍</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./美化.css">
-    <link rel="icon" href="./img/logo透明底/標準色Logo1.png">
+    <link rel="icon" href="./logo透明底/標準色Logo1.png">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container-fluid">
-            <a href=""><img src="./img2/logo底色檔/白綠Logo 綠底.jpg" class="navbar-logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse custom-navbar" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">關於我們</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">美容服務</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">住宿服務</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">美容產品</a></li>
-                </ul>
-
-                <ul class="navbar-nav d-flex text-align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/lujandaopet/reels/"
-                            target="_blank"><img src="./img3/icons-instagram.png" class="navbar-icon" alt=""></a></li>
-                    <li><a class="nav-link" href="https://line.me/R/ti/p/@049fghop?oat_content=url&ts=09221211"
-                            target="_blank"><img src="./img3/icons-line.png" class="navbar-icon" alt=""></a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-target="#loginModal" data-bs-toggle="modal"
-                            href="#"><img src="./img3/login-icon.png" class="navbar-icon" alt=""></a></li>
-                    </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">登入或註冊</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>為確保你的資訊安全，請進行手機驗證。</p>
-                <div class="input-group mb-3">
-                    <select class="form-select" style="max-width: 100px;">
-                        <option value="+886" selected>+886</option>
-                        <!-- 可加入其他國碼 -->
-                    </select>
-                    <input type="text" class="form-control" placeholder="手機號碼">
+    <div class="fixedLineP">
+        <a href="https://line.me/R/ti/p/@049fghop?oat_content=url&ts=09221211" data-bs-target="#fixedLine3"
+            data-bs-toggle="modal">
+            <div id="fixedLine"></div>
+        </a>
+    </div>
+    <div class="modal fade" id="fixedLine3" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="loginModalLabel">綠棧道官方Line</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <button class="btn btn-custom w-100">發送驗證碼</button>
-                <small class="d-block text-center mt-3">
-                    驗證後即代表同意 <a href="#" class="text-decoration-none">隱私權條款</a>
-                </small>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img style="width: 200px; height: auto;" src="./icon_else/LineQRcode.png" alt="LineQRcode">
+                    </div>
+                    <br><br>
+                    <p class="text-center" style="color: rgb(126, 126, 126);">掃描上方QRcode<br>即刻加入綠棧道官方Line</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- Navbar -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top header-nav">
+            <div class="container">
+                <!-- brand -->
+                <a href="#">
+                    <img src="./logo底色檔/白綠Logo 綠底.jpg" class="navbar-logo">
+                </a>
+
+                <!-- menu -->
+                <a id="loginMobile" class="nav-link d-lg-none" data-bs-target="#loginModal" data-bs-toggle="modal"
+                    style="margin-left: 280px;" href="#"><img style="width: 50px; height: auto;"
+                        src="./icon_else/login-icon.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-start collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-4">
+                        <li class="nav-item"><a class="nav-link" href="#aboutUs">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物旅館.html">寵物旅館</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物美容.html">寵物美容</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Q&A.html">Q & A</a></li>
+                    </ul>
+                </div>
+                <div class="ms-auto d-none d-lg-block">
+                    <ul class="navbar-nav d-flex text-align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/lujandaopet/posts/"
+                                target="_blank"><img src="./icon_else/icons-instagram.png" class="navbar-icon"
+                                    alt=""></a>
+                        </li>
+                        <li><a class="nav-link" href="https://www.facebook.com/profile.php?id=61566735456756#"
+                                target="_blank"><img src="./icon_else/icons-facebook-50.png" class="navbar-icon"
+                                    alt=""></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#loginModal" data-bs-toggle="modal"
+                                href="#"><img src="./icon_else/login-icon.png" class="navbar-icon" alt=""></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">登入或註冊</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>為確保你的資訊安全，請進行手機驗證。</p>
+                        <div class="input-group mb-3">
+                            <select class="form-select" style="max-width: 100px;">
+                                <option value="+886" selected>+886</option>
+                                <!-- 可加入其他國碼 -->
+                            </select>
+                            <input type="text" id="phoneInput" class="form-control" placeholder="手機號碼">
+                        </div>
+                        <div id="message" class="error-message"></div>
+                        <button id="sendButton" class="btn btn-custom w-100" disabled>發送驗證碼</button>
+                        <small class="d-block text-center mt-3">
+                            驗證後即代表同意 <a href="#" class="text-decoration-none">隱私權條款</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <!-- Hero Section -->
-    <div class="hero-section text-center d-none d-md-block">
-        <div class="container">
-            <h1 class="">綠棧道寵物旅館沙龍</h1>
+    <section class="hero">
+        <!-- Background Section -->
+        <div class="hero-background"></div>
+
+        <!-- Hero Content Section -->
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1 class="display-4 fw-bold">歡迎來到綠棧道</h1>
+                <p class="lead">為您的毛孩提供最佳美容、住宿服務，<br>讓寶貝們感受到滿滿的愛與關懷。</p>
+                <a href="#aboutUs" class="btn btn-custom btn-lg me-2">探索服務</a>
+                <a href="#appointment" class="btn btn-custom btn-lg me-2">立即預約</a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Form Section -->
     <div class="container my-5">
+        <div class="rows">
+            <div id="appointment" class="item d-flex justify-content-center align-items-center ttl-about mb-5">
+                <h3>預約服務</h3>
+            </div>
+        </div>
         <div class="row align-item-center g-4 form-custom">
-            <!-- <div class="col-12 col-md-6">
-                <img src="./img3/frontDoor.jpg" class="hero-image" alt="">
-            </div> -->
             <div class="col-12 col-md-6 me-auto fade-in">
                 <form class="form-section">
                     <!-- 預約服務項目 -->
                     <h3>預約服務項目</h3>
-                    <select class="form-select">
+                    <select class="form-select custom-select">
                         <option selected disabled>請選擇</option>
                         <option>美容服務</option>
                         <option>住宿服務</option>
                     </select>
                     <br>
-                    <h3>預約日期</h3>
-                    <input type="date" class="form-control">
+                    <h3 class="form-title">預約日期</h3>
+                    <div class="form-group">
+                        <label for="appointment-date" class="form-title d-flex align-items-center">
+                        </label>
+                        <input placeholder="請選擇日期" type="date" id="appointment-date"
+                            class="form-control custom-input datepicker">
+                    </div>
+                    <!-- 日期區間 -->
+                    <div class="form-group date-range-picker d-none">
+                        <label for="appointment-range" class="form-title">選擇日期區間</label>
+                        <input type="text" id="appointment-range" class="form-control custom-input" placeholder="選擇日期">
+                    </div>
+                    <small id="weekday-display" class="form-text text-muted my-2 "></small>
+                    <!-- 日期區間 -->
                     <br>
-                    <h3>毛孩類型</h3>
-                    <select class="form-select">
+                    <h3 class="form-title mt-2">毛孩類型</h3>
+                    <select class="form-select custom-select">
                         <option selected disabled>請選擇</option>
                         <optgroup label="貓">
                             <option>長毛貓</option>
                             <option>短毛貓</option>
                         </optgroup>
                         <optgroup label="狗">
-                            <option>小型犬</option>
-                            <option>中型犬</option>
-                            <option>大型犬</option>
+                            <option>小型犬(1~8公斤)</option>
+                            <option>中型犬(8~15公斤)</option>
+                            <option>大型犬(15公斤以上)</option>
                         </optgroup>
                     </select>
                     <br>
-                    <button class="btn btn-custom w-100">送出</button>
+                    <button class="btn btn-custom w-100" id="submitButton" disabled>送出</button>
+                    <div class="form-check mt-3 d-flex justify-content-center">
+                        <input type="checkbox" id="readInfoCheckbox" class="form-check-input">
+                        <label for="readInfoCheckbox" class="form-check-label ms-1">
+                            我已閱讀並同意<a href="" data-bs-target="#readInfo"
+                                data-bs-toggle="modal">注意事項</a>
+                        </label>
+                    </div>
+                    <div class="text-center mt-3">
+                        <small>預約請先閱讀<b>「 注意事項 」</b>，<br>以保障雙方權益。</small>
+                    </div>
                 </form>
             </div>
+            <div class="modal fade" id="readInfo" tabindex="-1" aria-labelledby="readInfoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <img id="modalImage" class="img-fluid w-100" src="./icon_else/注意事項.png" alt="注意事項"
+                                style="cursor: zoom-in;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="container">
+    <!-- 關於我們 -->
+    <div id="關於我們" class="container ctn-custom">
         <div class="rows">
-            <div class="item d-flex justify-content-center align-items-center ttl-about">
+            <div id="aboutUs" class="item d-flex justify-content-center align-items-center ttl-about mb-5">
                 <h3>關於我們</h3>
             </div>
         </div>
-        <div class="row my-3 d-flex justify-content-around align-items-center fade-in">
-            <div class="col-12 col-md-5">
-                <div class="item txt-about">
-                    <p>我們致力於為您的毛小孩提供最優質的服務<br>
-                        讓牠們感受到如家般的溫暖與舒適。<br>
-                        我們專業的寵物美容團隊運用細心的護理技術<br>
-                        為毛小孩量身打造最適合的造型<br>
-                        提升牠們的健康與美感。<br><br>
-
-                        同時，我們提供安全舒適的寵物住宿服務<br>
-                        配備全天候的照護與溫馨的生活空間，<br>
-                        讓您的毛小孩在我們的陪伴下享受愉快的假期。<br>
-                        不論是美容還是住宿，我們始終以愛與專業守護您的寵物！</p>
+        <div id="carouselExample" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card card-custom mx-auto" style="width: 90%;">
+                        <div class="card-body mt-5">
+                            <div>
+                                <br>
+                                <p class="card-text">我們致力於為您的毛小孩提供最優質的服務<br>
+                                    讓牠們感受到如家般的溫暖與舒適。<br>
+                                    我們專業的寵物美容團隊運用細心的護理技術<br>
+                                    為毛小孩量身打造最適合的造型<br>
+                                    提升牠們的健康與美感。<br><br><br>
+                                <div>
+                                </div>
+                                同時，我們提供安全舒適的寵物住宿服務<br>
+                                配備全天候的照護與溫馨的生活空間，<br>
+                                讓您的毛小孩在我們的陪伴下享受愉快的假期。<br>
+                                不論是美容還是住宿，我們始終以愛與專業守護您的寵物！
+                                </p><br><br><br>
+                            </div>
+                            <div class="d-flex justify-content-end mt-2">
+                                <a href="#" class="btn btn-custom">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card card-custom mx-auto" style="width: 90%;">
+                        <div class="">
+                            <img src="./寵物圖片/pet07.jpg" class="card-img-top cimg-custom" alt="Cat">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mt-2 p-0">寵物旅館</h5>
+                            <p class="card-text text-center mt-0" style="color: #6c6c6c;">
+                                專屬於每個毛孩的溫馨樂園，<br>用心打造舒適的居住空間<br>讓毛孩享受如家般的呵護與陪伴！</p>
+                            <div class="d-flex justify-content-end">
+                                <a href="#" class="btn btn-custom">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card card-custom mx-auto" style="width: 90%;">
+                        <div class="">
+                            <img src="./寵物圖片/pet01.jpg" class="card-img-top cimg-custom" alt="Cat">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center mt-2 p-0">寵物美容</h5>
+                            <p class="card-text text-center mt-0" style="color: #6c6c6c;">
+                                用專業與愛心呵護每一寸毛髮，<br>為毛孩量身打造專屬造型，<br>讓牠們展現自信與魅力，從內而外閃耀光彩！</p>
+                            <div class="d-flex justify-content-end">
+                                <a href="#" class="btn btn-custom">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="row">
-                    <div class="col-12 col-md-7">
-                        <div class="item pic-about">
-                            <img src="./img3/室內1.2.jpg" alt="" class="img-fluid img-thumbnail gradient-border">
+            <button class="carousel-control-prev cbtn-custom" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next cbtn-custom" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="row d-none d-md-flex">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card card-custom">
+                    <div class="card-body">
+                        <p class="card-text mt-5">我們致力於為您的毛小孩提供最優質的服務<br>
+                            讓牠們感受到如家般的溫暖與舒適。<br>
+                            我們專業的寵物美容團隊運用細心的護理技術<br>
+                            為毛小孩量身打造最適合的造型<br>
+                            提升牠們的健康與美感。<br><br><br>
+
+                            同時，我們提供安全舒適的寵物住宿服務<br>
+                            配備全天候的照護與溫馨的生活空間，<br>
+                            讓您的毛小孩在我們的陪伴下享受愉快的假期。<br>
+                            不論是美容還是住宿，我們始終以愛與專業守護您的寵物！
+                        </p><br><br><br>
+                        <div class="d-flex justify-content-end mt-5">
+                            <a href="#" class="btn btn-custom">了解更多</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-7 offset-md-3">
-                        <div class="item pic-about2">
-                            <img src="./img3/工作室2.jpg" alt="" class="img-fluid img-thumbnail gradient-border">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card card-custom">
+                    <div class="">
+                        <img src="./寵物圖片/pet07.jpg" class="card-img-top cimg-custom" alt="Cat">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center mt-2 p-0">寵物旅館</h5>
+                        <p class="card-text text-center mt-0" style="color: #6c6c6c;">
+                            專屬於每個毛孩的溫馨樂園，<br>用心打造舒適的居住空間<br>讓毛孩享受如家般的呵護與陪伴！</p>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-custom">了解更多</a>
                         </div>
                     </div>
-
-
-
+                </div>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card card-custom">
+                    <div class="">
+                        <img src="./寵物圖片/pet01.jpg" class="card-img-top cimg-custom" alt="Cat">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center mt-2 p-0">寵物美容</h5>
+                        <p class="card-text text-center mt-0" style="color: #6c6c6c;">
+                            用專業與愛心呵護每一寸毛髮，<br>為毛孩量身打造專屬造型，<br>讓牠們展現自信與魅力，從內而外閃耀光彩！</p>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-custom">了解更多</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <!-- Footer -->
-    <div class="custom-footer">
+    <div class="custom-footer mt-5">
         <div class="container">
-            <div class="row">
+            <div class="row d-flex justify-content-around">
                 <!-- 左側區域 -->
-                <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
                     <div class="item">
-                        <img src="./img/logo透明底/白綠Logo+標準字.png" alt="Logo" class="footer-logo">
-                        <p>07-3519063</p>
-                        <a href="lujandaopet@gmail.com" class="footer-link footer-hover">lujandaopet@gmail.com</a>
-                        <p>高雄市楠梓區興楠路27號</p>
+                        <img src="./logo透明底/白綠Logo+標準字.png" alt="Logo" class="footer-logo">
+                        <p>聯絡電話：07-3519063</p>
+                        <p>手機號碼：0909811883</p>
+                        <p>營業時間：09:00 - 19:00 (週日公休)</p>
+                        <div class="row">
+                            <div class="col-4" style="margin-left: 80px; border: solid; border-width: 0 2px 0 0; ">
+                                <a href="https://www.facebook.com/profile.php?id=61566735456756#"
+                                    class="footer-icon d-block"><img src="./icon_else/icons-facebook-50.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                <a class="footer-icon d-block" href="https://www.instagram.com/lujandaopet/reels/"><img
+                                        src="./icon_else/icons-instagram.png" alt=""></a>
+                            </div>
+                        </div>
+                        <p class="mt-3">高雄市楠梓區興楠路27號</p>
                     </div>
                 </div>
-
-
-                <!-- 中央區域 -->
-
-
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.912430398509!2d120.33919499999999!3d22.731496000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fd6a0077c83%3A0xa2f8a0f2b3e7f28d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IiI5qWg6LevMjfomZ8!5e0!3m2!1szh-TW!2stw!4v1749101904642!5m2!1szh-TW!2stw"
+                <div class="col-md-4 d-flex justify-content-center">
+                    <iframe style="width: 300px; height: auto;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.912430398509!2d120.33919499999999!3d22.731496000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fd6a0077c83%3A0xa2f8a0f2b3e7f28d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IiI5qWg6LevMjfomZ8!5e0!3m2!1szh-TW!2stw!4v1749377704753!5m2!1szh-TW!2stw"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-
                 <!-- 右側區域 -->
-                <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
-                    <div>
-                        <p class="footer-section-title">服務條款</p>
-                        <a href="#" class="footer-link">使用細則 & 隱私權條款</a>
-                        <br><br><br>
-                        <p class="footer-section-title">相關服務</p>
-                        <a href="#" class="footer-link">美容服務</a><br>
-                        <a href="#" class="footer-link">住宿服務</a>
+                <div class="col-md-4 d-flex justify-content-center mt-5">
+                    <div class="row text-center">
+                        <div class="col-12 mt-4">
+                            <p class="footer-section-title">服務條款</p>
+                            <a href="#" class="footer-link d-block">使用細則 & <br>隱私權條款</a>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p class="footer-section-title">相關服務</p>
+                            <a href="寵物美容.html" class="footer-link d-block">寵物美容</a>
+                            <a href="寵物住宿.html" class="footer-link d-block">寵物住宿</a>
+                        </div>
+
                     </div>
 
                 </div>
-            </div>
 
-            <!-- 底部 -->
-            <div class="footer-bottom">
-                Powered by <a href="#" class="footer-link">lujandaopet</a> All rights reserved.
             </div>
         </div>
+
+        <!-- 底部 -->
+        <div class="footer-bottom">
+            Powered by <a href="#" class="footer-link">lujandaopet</a> All rights reserved.
+        </div>
     </div>
+    </div>
+
 
 
 
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
             // 選取所有包含 `fade-in` 類別的元素
             const fadeElements = document.querySelectorAll('.fade-in');
 
             // 建立 Intersection Observer
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible'); // 加上 `visible` 類別
-                        observer.unobserve(entry.target); // 停止監聽這個元素
+                        entry.target.classList.add('visible'); // 加上 `visible` 類別（淡入）
+                    } else {
+                        entry.target.classList.remove('visible'); // 移除 `visible` 類別（淡出）
                     }
                 });
-            }, { threshold: 0.1 }); // 只有當 10% 的元素進入視口時觸發
+            }, { threshold: 0.1 }); // 只有當 10% 的元素進入或移出視口時觸發
 
             // 開始監聽每個 `fade-in` 元素
             fadeElements.forEach(el => observer.observe(el));
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('appointment-date');
+            const weekdayDisplay = document.getElementById('weekday-display');
+
+            dateInput.addEventListener('change', () => {
+                const dateValue = new Date(dateInput.value);
+                const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+                if (!isNaN(dateValue)) { // 確保是有效日期
+                    const weekday = weekdays[dateValue.getDay()];
+                    weekdayDisplay.textContent = `所選日期為：${weekday}`;
+                } else {
+                    weekdayDisplay.textContent = ''; // 清除無效輸入的內容
+                }
+            });
+
+
+
+            // 在日期區間模式下，顯示選擇的完整範圍
+            dateRangeInput.addEventListener('input', () => {
+                const rangeValue = dateRangeInput.value;
+                const [startDate, endDate] = rangeValue.split(" to ").map(date => new Date(date.trim()));
+
+                if (!isNaN(startDate) && !isNaN(endDate)) { // 確保區間日期有效
+                    const startWeekday = weekdays[startDate.getDay()];
+                    const endWeekday = weekdays[endDate.getDay()];
+                    weekdayDisplay.textContent = `您選擇的範圍是：${startDate.toLocaleDateString()}（${startWeekday}） 至 ${endDate.toLocaleDateString()}（${endWeekday}）`;
+                } else {
+                    weekdayDisplay.textContent = ''; // 清除無效輸入的內容
+                }
+            });
 
         });
 
+        const serviceSelect = document.querySelector(".form-select.custom-select");
+        const singleDateInput = document.querySelector("#appointment-date");
+        const dateRangePickerContainer = document.querySelector(".date-range-picker");
+        const dateRangeInput = document.querySelector("#appointment-range");
+        const weekdayDisplay = document.querySelector("#weekday-display");
+
+        // 初始化日期區間選擇器111
+        const initDateRangePicker = () => {
+            const weekdays = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+
+            flatpickr(dateRangeInput, {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                minDate: "today",
+                onChange: (selectedDates) => {
+                    if (selectedDates.length === 2) {
+                        const startDate = selectedDates[0];
+                        const endDate = selectedDates[1];
+
+                        const startWeekday = weekdays[startDate.getDay()];
+                        const endWeekday = weekdays[endDate.getDay()];
+
+                        const startDateFormatted = `${startDate.getFullYear()}/${startDate.getMonth() + 1}/${startDate.getDate()}(${startWeekday})`;
+                        const endDateFormatted = `${endDate.getFullYear()}/${endDate.getMonth() + 1}/${endDate.getDate()}(${endWeekday})`;
+
+                        weekdayDisplay.textContent = `您選擇的區間是：${startDateFormatted} to ${endDateFormatted}`;
+                    } else {
+                        weekdayDisplay.textContent = "請選擇完整的區間。";
+                    }
+                },
+            });
+        };
+
+
+        serviceSelect.addEventListener("change", () => {
+            const selectedService = serviceSelect.value;
+            if (selectedService === "住宿服務") {
+                // 切換到日期區間模式
+                singleDateInput.classList.add("d-none");
+                dateRangePickerContainer.classList.remove("d-none");
+                initDateRangePicker();
+            } else if (selectedService === "美容服務") {
+                // 切換到單日期模式
+                singleDateInput.classList.remove("d-none");
+                dateRangePickerContainer.classList.add("d-none");
+                initSingleDatePicker();
+            }
+        });
+
+        initSingleDatePicker();
+
+
+
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            flatpickr('.datepicker', {
+                dateFormat: "Y-m-d", // 格式化日期
+                minDate: "today", // 禁用過去的日期
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const phoneInput = document.getElementById('phoneInput');
+            const message = document.getElementById('message');
+            const sendButton = document.getElementById('sendButton');
+
+            phoneInput.addEventListener('input', () => {
+                const value = phoneInput.value;
+                const regex = /^09\d{8}$/;
+
+                if (!value) {
+                    message.textContent = '';
+                    sendButton.disabled = true;
+                    return;
+                }
+
+                if (!regex.test(value)) {
+                    message.textContent = '格式錯誤，請輸入09xxxxxxxx';
+                    message.className = 'error-message';
+                    sendButton.disabled = true;
+                } else {
+                    message.textContent = '輸入正確';
+                    message.className = 'success-message';
+                    sendButton.disabled = false;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readInfoCheckbox = document.getElementById('readInfoCheckbox');
+            const submitButton = document.getElementById('submitButton');
+
+            // 監聽核取方塊狀態變化
+            readInfoCheckbox.addEventListener('change', () => {
+                submitButton.disabled = !readInfoCheckbox.checked;
+            });
+
+            // 表單提交事件（可選）
+            const form = document.getElementById('appointment-form');
+            form.addEventListener('submit', (event) => {
+                if (!readInfoCheckbox.checked) {
+                    event.preventDefault(); // 防止提交表單
+                    alert('請先閱讀並同意注意事項。');
+                }
+            });
+        });
     </script>
 
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 
 </html>
