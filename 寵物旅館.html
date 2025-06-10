@@ -47,15 +47,18 @@
                 </a>
 
                 <!-- menu -->
+                <a id="loginMobile" class="nav-link d-lg-none" data-bs-target="#loginModal" data-bs-toggle="modal"
+                    style="margin-left: 280px;" href="#"><img style="width: 50px; height: auto;"
+                        src="./icon_else/login-icon.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="justify-content-start collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-4">
-                        <li class="nav-item"><a class="nav-link" href="#aboutUs">關於我們</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">寵物旅館</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">寵物美容</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Q & A</a></li>
+                        <li class="nav-item"><a class="nav-link" href="官網.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物旅館.html">寵物旅館</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物美容.html">寵物美容</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Q&A.html">Q & A</a></li>
                     </ul>
                 </div>
 
@@ -102,15 +105,24 @@
         </div>
     </header>
     <!-- Hero Section -->
-    <div class="hero-section text-center d-none d-md-block mb-3">
-        <div class="container">
-            <h1 class="">綠棧道寵物旅館沙龍</h1>
+    <section class="hero">
+        <!-- Background Section -->
+        <div class="hero-background"></div>
+
+        <!-- Hero Content Section -->
+        <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1 class="display-4 fw-bold">毛孩的溫馨旅館</h1>
+                <p class="lead">為您的毛孩提供住宿服務，專業與愛心的守護。</p>
+                <a href="#appointment" class="btn btn-custom btn-md me-2">立即預約</a>
+                <a href="#intro-v" class="btn btn-custom btn-md me-2">房型介紹</a>
+            </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Form Section -->
-    <div class="container my-5">
+    <div class="container my-5" id="appointment">
         <div class="row align-item-center g-4 form-custom">
             <div class="col-12 col-md-6 me-auto fade-in">
                 <form class="form-section">
@@ -118,8 +130,8 @@
                     <h3>預約服務項目</h3>
                     <select class="form-select custom-select">
                         <option selected disabled>請選擇</option>
-                        <option>寵物美容</option>
-                        <option>寵物住宿</option>
+                        <option>美容服務</option>
+                        <option>住宿服務</option>
                     </select>
                     <br>
                     <h3 class="form-title">預約日期</h3>
@@ -145,17 +157,23 @@
                             <option>短毛貓</option>
                         </optgroup>
                         <optgroup label="狗">
-                            <option>小型犬</option>
-                            <option>中型犬</option>
-                            <option>大型犬</option>
+                            <option>小型犬(1~8公斤)</option>
+                            <option>中型犬(8~15公斤)</option>
+                            <option>大型犬(15公斤以上)</option>
                         </optgroup>
                     </select>
                     <br>
-                    <button class="btn btn-custom w-100">送出</button>
-                    <div class="text-center">
-                        <small>預約請先閱讀<a href="" data-bs-target="#readInfo"
-                                data-bs-toggle="modal">注意事項</a><br>以保障雙方權益</small>
+                    <button class="btn btn-custom w-100" id="submitButton" disabled>送出</button>
+                    <div class="form-check mt-3 d-flex justify-content-center">
+                        <input type="checkbox" id="readInfoCheckbox" class="form-check-input">
+                        <label for="readInfoCheckbox" class="form-check-label ms-1">
+                            我已閱讀並同意<a href="" data-bs-target="#readInfo" data-bs-toggle="modal">注意事項</a>
+                        </label>
                     </div>
+                    <div class="text-center mt-3">
+                        <small>預約請先閱讀<b>「 注意事項 」</b>，<br>預約後請與本店確認資訊，<br>以保障雙方權益。</small>
+                    </div>
+                </form>
             </div>
             <div class="modal fade" id="readInfo" tabindex="-1" aria-labelledby="readInfoLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -170,28 +188,156 @@
                     </div>
                 </div>
             </div>
-            </form>
         </div>
     </div>
-    <!-- header -->
-    <div class="container">
-        <div class="row" style="background-image: url(./寵物圖片/pexels-ubaidshareef-20816519.jpg);">
-            
-        </div>
-    </div>
-    <!-- body -->
-    <div class="container">
 
+    <!-- Service Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="rows" id="intro-v">
+                <div class="item d-flex justify-content-center align-items-center ttl-about mb-5">
+                    <h3>房型介紹</h3>
+                </div>
+            </div>
+            <div class="row g-3 mb-5 des-row-custom">
+                <div class="col-12 mb-3">
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-center">
+                            <img src="環境及設備/貓房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <div class="item gallery-item">
+                                <h5 class="mb-3">
+                                    <貓咪房>
+                                </h5>
+                                <p><b>房型特色</b>：<br>精緻空間適合1~2貓咪，是貓咪家庭精緻實惠的好選擇。<br>若升級大型房則可開蓋上下通行！</p>
+                                <p><b>房間價格</b>：<br>中型房：600/晚<br>大型房：1200/晚</p>
+                                <p><b>房間數量</b>：<br> 6 間</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row g-3 mb-5 des-row-custom ">
+                <div class="col-12 mb-3">
+                    <div class="row mt-4">
+                        <div class="col-6 d-flex justify-content-center">
+                            <div class="item gallery-item">
+                                <h5 class="mb-3">
+                                    <中小型犬房>
+                                </h5>
+                                <p><b>房型特色</b>：<br>精緻空間適合中型犬，或是活潑好動的中型犬。</p>
+                                <p><b>房間價格</b>：<br>小型犬房：600/晚<br>中型犬房：800/晚
+                                    <hr><b>安親</b>：<br>小型犬：200元起/4hr後<br>每小時+50<br>中型犬：300元起/4hr後<br>每小時+75
+                                </p>
+                                <p><b>房間數量</b>：<br> 8 間</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex align-items-center">
+                            <img src="./環境及設備/犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row g-3 mb-5 des-row-custom">
+                <div class="col-12 mb-3">
+                    <div class="row mt-4">
+                        <div class="col-6 d-flex justify-content-center">
+                            <img src="./環境及設備/大型犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <div class="item gallery-item">
+                                <h5 class="mb-3">
+                                    <大型犬房>
+                                </h5>
+                                <p><b>房型特色</b>：<br>本店最大房間適合大型犬，待在房間也能跑跑跳跳。</p>
+                                <p><b>房間價格</b>：<br>1000/晚</p>
+                                    <hr><b>安親</b>：<br>大型犬：500元起/4hr後<br>每小時+100<br><br>
+                                <p><b>房間數量</b>：<br> 1 間</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="container">
+        <div class="rows">
+            <div class="item d-flex justify-content-center align-items-center ttl-about mb-5">
+                <h3>加購服務及其他優惠通知</h3>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 text-center notify-custom">
+                <div class="div">
+                    <h5>加購服務</h5>
+                </div>
+                <hr style="width: auto;">
+                <div class="div my-4">滴藥、擦藥及手動餵藥，貓咪50元(日)，狗狗30元(日)。</div>
+            </div>
+            <div class="col-12 text-center notify-custom">
+                <div>
+                    <h5>其他優惠</h5>
+                </div>
+                <hr style="width: auto;">
+                <p class="my-4">貓咪住宿第二位同住加200元。</p>
+                <hr>
+                <p class="my-4">狗狗住宿第二位享95折優惠。</p>
+                <hr>
+                <p class="my-4">入住10天享95折、20天9折、30天以上85折優惠。</p>
+            </div>
+
+            <div class="col-12 notify-custom mb-5 text-center">
+                <div>
+                    <h5>其他注意事項</h5>
+                </div>
+                <hr style="width: auto;">
+                <p>入住及退房時間為10:00 - 19:00，超過退房時間將列為加住一晚。</p>
+            </div>
+
+        </div>
     </div>
-    
+    <div class="container">
+        <div class="rows">
+            <div class="item d-flex justify-content-center align-items-center ttl-about mb-5 mt-5">
+                <h3>環境及設備</h3>
+            </div>
+        </div>
+
+        <div class="row g-4 d-flex justify-content-center">
+            <div class="col-6 col-md-2 photo-wrapper">
+                <img src="./環境及設備/室內1 .jpg" class="img-fluid rounded gallery-img" alt="環境照片1">
+            </div>
+            <div class="col-6 col-md-2 photo-wrapper">
+                <img src="./環境及設備/室內2.jpg" class="img-fluid rounded gallery-img" alt="環境照片2">
+            </div>
+            <div class="col-6 col-md-2 photo-wrapper">
+                <img src="./環境及設備/室內3.jpg" class="img-fluid rounded gallery-img" alt="環境照片3">
+            </div>
+            <div class="col-6 col-md-2 photo-wrapper">
+                <img src="./環境及設備/室內4.jpg" class="img-fluid rounded gallery-img" alt="環境照片4">
+            </div>
+            <div class="col-6 col-md-2 photo-wrapper">
+                <img src="./環境及設備/室內5.jpg" class="img-fluid rounded gallery-img" alt="環境照片5">
+            </div>
+        </div>
+    </div>
+
 
 
 
 
     <!-- Footer -->
-    <div class="custom-footer">
+    <div class="custom-footer mt-5">
         <div class="container">
-            <div class="row d-flex justify-content-between">
+            <div class="row d-flex justify-content-around">
                 <!-- 左側區域 -->
                 <div class="col-md-4 text-center">
                     <div class="item">
@@ -199,57 +345,74 @@
                         <p>聯絡電話：07-3519063</p>
                         <p>手機號碼：0909811883</p>
                         <p>營業時間：09:00 - 19:00 (週日公休)</p>
-                        <a href="https://www.facebook.com/profile.php?id=61566735456756#" class="footer-link footer-hover"><img src="./icon_else/icons-facebook-50.png" alt=""></a>
-                        <a href="https://www.instagram.com/lujandaopet/reels/"><img src="./icon_else/icons-instagram.png" alt=""></a>
+                        <div class="row">
+                            <div class="col-4" style="margin-left: 80px; border: solid; border-width: 0 2px 0 0; ">
+                                <a href="https://www.facebook.com/profile.php?id=61566735456756#"
+                                    class="footer-icon d-block"><img src="./icon_else/icons-facebook-50.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                <a class="footer-icon d-block" href="https://www.instagram.com/lujandaopet/reels/"><img
+                                        src="./icon_else/icons-instagram.png" alt=""></a>
+                            </div>
+                        </div>
                         <p class="mt-3">高雄市楠梓區興楠路27號</p>
                     </div>
                 </div>
-                <!-- 右側區域 -->
                 <div class="col-md-4 d-flex justify-content-center">
+                    <iframe style="width: 300px; height: auto;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.912430398509!2d120.33919499999999!3d22.731496000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fd6a0077c83%3A0xa2f8a0f2b3e7f28d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IiI5qWg6LevMjfomZ8!5e0!3m2!1szh-TW!2stw!4v1749377704753!5m2!1szh-TW!2stw"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- 右側區域 -->
+                <div class="col-md-4 d-flex justify-content-center mt-5">
                     <div class="row text-center">
-                        <div class="col-12 col-md-6 mt-5">
+                        <div class="col-12 mt-4">
                             <p class="footer-section-title">服務條款</p>
-                            <a href="#" class="footer-link">使用細則 & <br>隱私權條款</a>
+                            <a href="#" class="footer-link d-block">使用細則 & <br>隱私權條款</a>
                         </div>
-                        <div class="col-12 col-md-6 mt-5">
+                        <div class="col-12 mt-4">
                             <p class="footer-section-title">相關服務</p>
-                            <a href="#" class="footer-link d-block">寵物美容</a>
-                            <a href="#" class="footer-link d-block">寵物住宿</a>
+                            <a href="寵物美容.html" class="footer-link d-block">寵物美容</a>
+                            <a href="寵物住宿.html" class="footer-link d-block">寵物住宿</a>
                         </div>
 
                     </div>
 
                 </div>
-            </div>
 
-            <!-- 底部 -->
-            <div class="footer-bottom">
-                Powered by <a href="#" class="footer-link">lujandaopet</a> All rights reserved.
             </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer-bottom">
+            Powered by <a href="#" class="footer-link">lujandaopet</a> All rights reserved.
         </div>
     </div>
 
 
 
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
             // 選取所有包含 `fade-in` 類別的元素
             const fadeElements = document.querySelectorAll('.fade-in');
 
             // 建立 Intersection Observer
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible'); // 加上 `visible` 類別
-                        observer.unobserve(entry.target); // 停止監聽這個元素
+                        entry.target.classList.add('visible'); // 加上 `visible` 類別（淡入）
+                    } else {
+                        entry.target.classList.remove('visible'); // 移除 `visible` 類別（淡出）
                     }
                 });
-            }, { threshold: 0.1 }); // 只有當 10% 的元素進入視口時觸發
+            }, { threshold: 0.1 }); // 只有當 10% 的元素進入或移出視口時觸發
 
             // 開始監聽每個 `fade-in` 元素
             fadeElements.forEach(el => observer.observe(el));
-
         });
+
 
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -267,6 +430,8 @@
                     weekdayDisplay.textContent = ''; // 清除無效輸入的內容
                 }
             });
+
+
 
             // 在日期區間模式下，顯示選擇的完整範圍
             dateRangeInput.addEventListener('input', () => {
@@ -297,6 +462,7 @@
             flatpickr(dateRangeInput, {
                 mode: "range",
                 dateFormat: "Y-m-d",
+                minDate: "today",
                 onChange: (selectedDates) => {
                     if (selectedDates.length === 2) {
                         const startDate = selectedDates[0];
@@ -349,58 +515,56 @@
     </script>
 
     <script>
-        const carousel = document.querySelector('#carouselExample');
-        const carouselInstance = new bootstrap.Carousel(carousel);
+        document.addEventListener('DOMContentLoaded', () => {
+            const phoneInput = document.getElementById('phoneInput');
+            const message = document.getElementById('message');
+            const sendButton = document.getElementById('sendButton');
 
-        let startX, endX, isDragging = false;
+            phoneInput.addEventListener('input', () => {
+                const value = phoneInput.value;
+                const regex = /^09\d{8}$/;
 
-        // For touch devices
-        carousel.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
+                if (!value) {
+                    message.textContent = '';
+                    sendButton.disabled = true;
+                    return;
+                }
+
+                if (!regex.test(value)) {
+                    message.textContent = '格式錯誤，請輸入09xxxxxxxx';
+                    message.className = 'error-message';
+                    sendButton.disabled = true;
+                } else {
+                    message.textContent = '輸入正確';
+                    message.className = 'success-message';
+                    sendButton.disabled = false;
+                }
+            });
         });
-
-        carousel.addEventListener('touchmove', (e) => {
-            endX = e.touches[0].clientX;
-        });
-
-        carousel.addEventListener('touchend', () => {
-            handleSwipe();
-        });
-
-        // For mouse devices
-        carousel.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.clientX;
-        });
-
-        carousel.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                endX = e.clientX;
-            }
-        });
-
-        carousel.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                handleSwipe();
-            }
-        });
-
-        // Prevent accidental text selection during drag
-        carousel.addEventListener('dragstart', (e) => e.preventDefault());
-
-        // Swipe handler
-        function handleSwipe() {
-            if (startX - endX > 50) {
-                // Swipe left, go to the next item
-                carouselInstance.next();
-            } else if (endX - startX > 50) {
-                // Swipe right, go to the previous item
-                carouselInstance.prev();
-            }
-        }
-
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readInfoCheckbox = document.getElementById('readInfoCheckbox');
+            const submitButton = document.getElementById('submitButton');
+
+            // 監聽核取方塊狀態變化
+            readInfoCheckbox.addEventListener('change', () => {
+                submitButton.disabled = !readInfoCheckbox.checked;
+            });
+
+            // 表單提交事件（可選）
+            const form = document.getElementById('appointment-form');
+            form.addEventListener('submit', (event) => {
+                if (!readInfoCheckbox.checked) {
+                    event.preventDefault(); // 防止提交表單
+                    alert('請先閱讀並同意注意事項。');
+                }
+            });
+        });
+    </script>
+
+
 
 
 

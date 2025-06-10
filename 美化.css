@@ -85,8 +85,8 @@ body {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    background: url(./icon_else/footsteps.jpg);
-
+    /* background: url(./icon_else/footsteps.jpg); */
+    background-color: #9aa78a;
 }
 
 @media (max-width: 767px) {
@@ -97,7 +97,7 @@ body {
 
 .hero-background {
     background: url(./寵物圖片/pet08.jpg) center/cover no-repeat;
-    border: solid #383838;
+    border: solid #ffffff;
     border-width: 0 15px 0 0;
     border-radius: 0 50% 0 0;
 }
@@ -299,6 +299,18 @@ body {
 }
 
 
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 .footer {
     background-color: #f8f9fa;
     padding: 15px 0;
@@ -337,6 +349,34 @@ body {
     font-size: 16px;
     color: #333;
 }
+
+/* 確保圖片容器具有自動比例 */
+.photo-wrapper {
+    aspect-ratio: 4 / 3;
+    /* 預設為 4:3 比例，可根據需求調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #ddd;
+    /* 可選的背景色 */
+}
+
+/* 圖片設置 */
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* 確保圖片填充容器並保持比例 */
+    transition: transform 0.3s ease;
+}
+
+/* 懸停效果 */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -445,6 +485,54 @@ body {
     }
 }
 
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-item {
+    text-align: left;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #9aa78a;
+    width: auto;
+}
+
+.des-row-custom {
+
+    border-radius: 10px;
+}
+
+.notify-custom {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+    width: 350px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 桌面版專屬樣式 */
+@media (min-width: 768px) {
+    .gallery-img {
+        width: auto;
+        /* 調整寬度比例 */
+        height: 500px;
+        /* 保持圖片比例 */
+        margin: 0 auto;
+        /* 水平置中 */
+    }
+
+    .gallery-item {
+        padding-left: 20px;
+        /* 增加間距以保持排版美觀 */
+    }
+}
+
 .gradient-border {
     border: 5px solid #9aa78a;
 
@@ -469,4 +557,148 @@ body {
     color: green;
     font-size: 0.9rem;
     margin-top: 5px;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-decoration-none:hover {
+    text-decoration: none;
+}
+
+/* 以上是首頁 */
+
+.custom-tab-btn {
+    background-color: transparent;
+    /* 自訂背景色 */
+    color: #000000;
+    /* 自訂文字色 */
+    border: none;
+    /* 移除邊框 */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    /* 圓角 */
+    transition: background-color 0.3s ease;
+}
+
+.custom-tab-btn:hover {
+    background-color: #9aa78a;
+    /* 滑鼠懸停時顏色 */
+}
+
+.custom-tab-btn.active {
+    background-color: #264653;
+    /* 選取狀態顏色 */
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    /* 標題背景色 */
+    color: #343a40;
+    /* 標題文字色 */
+    font-weight: bold;
+    /* 字體加粗 */
+    border: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* 移除點擊後的陰影效果 */
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    /* 內容背景色 */
+    color: #495057;
+    /* 內容文字色 */
+    border: 1px solid #dee2e6;
+    /* 增加邊框 */
+    border-top: none;
+    /* 避免重疊邊框 */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #9aa78a;
+    /* 點擊後背景色 */
+    color: #ffffff;
+    /* 點擊後文字色 */
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* 在手機版時每行只顯示一列 */
+    .table tbody tr td {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #9aa78a;
+        border-radius: 10px;
+    }
+
+    /* 取消每行的標題分隔線 */
+    .table tbody tr td:nth-child(2)::before {
+        content: "小美容";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .table tbody tr td:nth-child(3)::before {
+        content: "大美容";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* 將手機版改為每列顯示一個單元 */
+    .table1 tbody tr td {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #9aa78a;
+    }
+
+    /* 標題顯示在每行的前面 */
+    .table1 tbody tr td:nth-child(2)::before {
+        content: "小型犬";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .table1 tbody tr td:nth-child(3)::before {
+        content: "中型犬";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .table1 tbody tr td:nth-child(4)::before {
+        content: "大型犬";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    /* 隱藏表頭 */
+    .table thead {
+        display: none;
+    }
 }

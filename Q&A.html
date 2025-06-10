@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綠棧道寵物旅館沙龍</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./美化.css">
+    <link rel="icon" href="./logo透明底/標準色Logo1.png">
+</head>
+
+<body>
+    <div class="fixedLineP">
+        <a href="https://line.me/R/ti/p/@049fghop?oat_content=url&ts=09221211" data-bs-target="#fixedLine3"
+            data-bs-toggle="modal">
+            <div id="fixedLine"></div>
+        </a>
+    </div>
+    <div class="modal fade" id="fixedLine3" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="loginModalLabel">綠棧道官方Line</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img style="width: 200px; height: auto;" src="./icon_else/LineQRcode.png" alt="LineQRcode">
+                    </div>
+                    <br><br>
+                    <p class="text-center" style="color: rgb(126, 126, 126);">掃描上方QRcode<br>即刻加入綠棧道官方Line</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top header-nav">
+            <div class="container">
+                <!-- brand -->
+                <a href="#">
+                    <img src="./logo底色檔/白綠Logo 綠底.jpg" class="navbar-logo">
+                </a>
+
+                <!-- menu -->
+                <a id="loginMobile" class="nav-link d-lg-none" data-bs-target="#loginModal" data-bs-toggle="modal"
+                    style="margin-left: 280px;" href="#"><img style="width: 50px; height: auto;"
+                        src="./icon_else/login-icon.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-start collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-4">
+                        <li class="nav-item"><a class="nav-link" href="官網.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物旅館.html">寵物旅館</a></li>
+                        <li class="nav-item"><a class="nav-link" href="寵物美容.html">寵物美容</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Q&A.html">Q & A</a></li>
+                    </ul>
+                </div>
+                <div class="ms-auto d-none d-lg-block">
+                    <ul class="navbar-nav d-flex text-align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/lujandaopet/posts/"
+                                target="_blank"><img src="./icon_else/icons-instagram.png" class="navbar-icon"
+                                    alt=""></a>
+                        </li>
+                        <li><a class="nav-link" href="https://www.facebook.com/profile.php?id=61566735456756#"
+                                target="_blank"><img src="./icon_else/icons-facebook-50.png" class="navbar-icon"
+                                    alt=""></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#loginModal" data-bs-toggle="modal"
+                                href="#"><img src="./icon_else/login-icon.png" class="navbar-icon" alt=""></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">登入或註冊</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>為確保你的資訊安全，請進行手機驗證。</p>
+                        <div class="input-group mb-3">
+                            <select class="form-select" style="max-width: 100px;">
+                                <option value="+886" selected>+886</option>
+                                <!-- 可加入其他國碼 -->
+                            </select>
+                            <input type="text" id="phoneInput" class="form-control" placeholder="手機號碼">
+                        </div>
+                        <div id="message" class="error-message"></div>
+                        <button id="sendButton" class="btn btn-custom w-100" disabled>發送驗證碼</button>
+                        <small class="d-block text-center mt-3">
+                            驗證後即代表同意 <a href="#" class="text-decoration-none">隱私權條款</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <!-- <section class="hero"> -->
+        <!-- Background Section -->
+        <!-- <div class="hero-background"></div> -->
+
+        <!-- Hero Content Section -->
+        <!-- <div class="hero-content-wrapper">
+            <div class="hero-content">
+                <h1 class="display-4 fw-bold">Q & A</h1>
+            </div>
+        </div>
+    </section>
+    <hr> -->
+
+    <!-- Form Section -->
+
+    <div class="container" style="margin-top: 100px;">
+
+        <div class="row">
+            <div class="item d-flex justify-content-center align-items-center ttl-about mb-5">
+                <h3>我想問</h3>
+            </div>
+        </div>
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs" id="qaTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link custom-tab-btn active" id="grooming-tab" data-bs-toggle="tab"
+                    data-bs-target="#grooming" type="button" role="tab" aria-controls="grooming" aria-selected="true">
+                    有關美容
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link custom-tab-btn" id="lodging-tab" data-bs-toggle="tab" data-bs-target="#lodging"
+                    type="button" role="tab" aria-controls="lodging" aria-selected="false">
+                    有關住宿
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4" id="qaTabContent">
+            <!-- Grooming Q&A -->
+            <div class="tab-pane fade show active" id="grooming" role="tabpanel" aria-labelledby="grooming-tab">
+                <div class="accordion" id="groomingAccordion">
+                    <!-- Accordion Items -->
+                    <!-- Example for one Q&A -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse1" aria-expanded="true"
+                                aria-controls="groomingCollapse1">
+                                美容服務需要提前預約嗎？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse1" class="accordion-collapse collapse show"
+                            aria-labelledby="groomingHeading1" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                是的，我們建議提前預約，以便安排最適合的時間。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse2" aria-expanded="false"
+                                aria-controls="groomingCollapse2">
+                                提供哪些種類的寵物美容服務？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse2" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading2" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                我們提供全身剪毛、洗澡、指甲修剪、耳朵清潔等服務。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse3" aria-expanded="false"
+                                aria-controls="groomingCollapse3">
+                                是否使用寵物專用美容產品？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse3" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading3" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                我們僅使用對寵物安全且溫和的專業美容產品。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse4" aria-expanded="false"
+                                aria-controls="groomingCollapse4">
+                                寵物初次美容需要注意什麼？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse4" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading4" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                請提前告知我們您的寵物是否有特殊需求或敏感史。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse5" aria-expanded="false"
+                                aria-controls="groomingCollapse5">
+                                是否接受攻擊性較強的寵物？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse5" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading5" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                可以，但我們可能會根據情況採取適當的安全措施。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse6" aria-expanded="false"
+                                aria-controls="groomingCollapse6">
+                                美容需要多長時間？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse6" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading6" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                根據寵物大小和服務內容，時間可能在 1 至 3 小時不等，視情況而定。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse7" aria-expanded="false"
+                                aria-controls="groomingCollapse7">
+                                美容後是否有特別護理建議？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse7" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading7" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                我們會根據服務提供個別建議，如保持皮膚清潔或避免過度梳理。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse8" aria-expanded="false"
+                                aria-controls="groomingCollapse8">
+                                是否有專門針對老年寵物的服務？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse8" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading8" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                我們提供溫和的美容服務，專為年長或身體狀況較弱的寵物設計。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse9" aria-expanded="false"
+                                aria-controls="groomingCollapse9">
+                                是否能安排特定造型設計？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse9" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading9" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                我們接受客製化的造型需求。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomingHeading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#groomingCollapse10" aria-expanded="false"
+                                aria-controls="groomingCollapse10">
+                                美容前需要餵食嗎？
+                            </button>
+                        </h2>
+                        <div id="groomingCollapse10" class="accordion-collapse collapse"
+                            aria-labelledby="groomingHeading10" data-bs-parent="#groomingAccordion">
+                            <div class="accordion-body">
+                                建議避免美容前立即餵食，尤其是進行深層清潔時。
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Lodging Q&A -->
+            <div class="tab-pane fade" id="lodging" role="tabpanel" aria-labelledby="lodging-tab">
+                <div class="accordion" id="lodgingAccordion">
+                    <!-- Accordion Items -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse1" aria-expanded="true"
+                                aria-controls="lodgingCollapse1">
+                                寵物住宿需要提前預訂嗎？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse1" class="accordion-collapse collapse show"
+                            aria-labelledby="lodgingHeading1" data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                是的，提前預訂可確保有足夠空間接待您的毛孩。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse2" aria-expanded="false"
+                                aria-controls="lodgingCollapse2">
+                                住宿環境是否衛生、安全？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse2" class="accordion-collapse collapse" aria-labelledby="lodgingHeading2"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們每日進行清潔，並設有全天候監控。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse3" aria-expanded="false"
+                                aria-controls="lodgingCollapse3">
+                                寵物是否單獨安置？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse3" class="accordion-collapse collapse" aria-labelledby="lodgingHeading3"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                視需求安排，提供單獨和群體居住的選擇。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse4" aria-expanded="false"
+                                aria-controls="lodgingCollapse4">
+                                寵物住宿期間如何減少分離焦慮？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse4" class="accordion-collapse collapse" aria-labelledby="lodgingHeading4"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們提供簡易玩具和定期互動，另外建議家人們幫忙準備熟悉的玩具或物品，讓寵物保持愉快。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse5" aria-expanded="false"
+                                aria-controls="lodgingCollapse5">
+                                若寵物生病會怎麼處理？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse5" class="accordion-collapse collapse" aria-labelledby="lodgingHeading5"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們有緊急醫療合作機構，會第一時間通知主人並處理。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse6" aria-expanded="false"
+                                aria-controls="lodgingCollapse6">
+                                寵物會得到多少運動時間？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse6" class="accordion-collapse collapse" aria-labelledby="lodgingHeading6"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們每天安排至少兩次的籠外運動或遊戲時間。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse7" aria-expanded="false"
+                                aria-controls="lodgingCollapse7">
+                                可否提供每日照片或影片更新？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse7" class="accordion-collapse collapse" aria-labelledby="lodgingHeading7"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們設有專屬監視器，家人們可以24小時觀看毛孩狀況。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse8" aria-expanded="false"
+                                aria-controls="lodgingCollapse8">
+                                寵物是否需要打疫苗才能住宿？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse8" class="accordion-collapse collapse" aria-labelledby="lodgingHeading8"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們要求所有入住的寵物接種必要疫苗，詳情請看「注意事項」。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse9" aria-expanded="false"
+                                aria-controls="lodgingCollapse9">
+                                住宿期間是否可安排美容服務？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse9" class="accordion-collapse collapse" aria-labelledby="lodgingHeading9"
+                            data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們可以另外加選美容服務。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="lodgingHeading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#lodgingCollapse10" aria-expanded="false"
+                                aria-controls="lodgingCollapse10">
+                                提供哪些類型的飼料？
+                            </button>
+                        </h2>
+                        <div id="lodgingCollapse10" class="accordion-collapse collapse"
+                            aria-labelledby="lodgingHeading10" data-bs-parent="#lodgingAccordion">
+                            <div class="accordion-body">
+                                我們建議主人自備毛孩熟悉的飼料。
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat for other Q&A -->
+                    <!-- Add additional Q&A here following the same structure -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="custom-footer mt-5">
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+                    <!-- 左側區域 -->
+                    <div class="col-md-4 text-center">
+                        <div class="item">
+                            <img src="./logo透明底/白綠Logo+標準字.png" alt="Logo" class="footer-logo">
+                            <p>聯絡電話：07-3519063</p>
+                            <p>手機號碼：0909811883</p>
+                            <p>營業時間：09:00 - 19:00 (週日公休)</p>
+                            <div class="row">
+                                <div class="col-4" style="margin-left: 80px; border: solid; border-width: 0 2px 0 0; ">
+                                    <a href="https://www.facebook.com/profile.php?id=61566735456756#"
+                                        class="footer-icon d-block"><img src="./icon_else/icons-facebook-50.png"
+                                            alt=""></a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="footer-icon d-block"
+                                        href="https://www.instagram.com/lujandaopet/reels/"><img
+                                            src="./icon_else/icons-instagram.png" alt=""></a>
+                                </div>
+                            </div>
+                            <p class="mt-3">高雄市楠梓區興楠路27號</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <iframe style="width: 300px; height: auto;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.912430398509!2d120.33919499999999!3d22.731496000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0fd6a0077c83%3A0xa2f8a0f2b3e7f28d!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A6IiI5qWg6LevMjfomZ8!5e0!3m2!1szh-TW!2stw!4v1749377704753!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- 右側區域 -->
+                    <div class="col-md-4 d-flex justify-content-center mt-5">
+                        <div class="row text-center">
+                            <div class="col-12 mt-4">
+                                <p class="footer-section-title">服務條款</p>
+                                <a href="#" class="footer-link d-block">使用細則 &
+                                    <br>隱私權條款</a>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <p class="footer-section-title">相關服務</p>
+                                <a href="寵物美容.html" class="footer-link d-block">寵物美容</a>
+                                <a href="寵物住宿.html" class="footer-link d-block">寵物住宿</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 底部 -->
+            <div class="footer-bottom">
+                Powered by <a href="#" class="footer-link">lujandaopet</a> All
+                rights
+                reserved.
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 選取所有包含 `fade-in` 類別的元素
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            // 建立 Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // 加上 `visible` 類別（淡入）
+                    } else {
+                        entry.target.classList.remove('visible'); // 移除 `visible` 類別（淡出）
+                    }
+                });
+            }, { threshold: 0.1 }); // 只有當 10% 的元素進入或移出視口時觸發
+
+            // 開始監聽每個 `fade-in` 元素
+            fadeElements.forEach(el => observer.observe(el));
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('appointment-date');
+            const weekdayDisplay = document.getElementById('weekday-display');
+
+            dateInput.addEventListener('change', () => {
+                const dateValue = new Date(dateInput.value);
+                const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+                if (!isNaN(dateValue)) { // 確保是有效日期
+                    const weekday = weekdays[dateValue.getDay()];
+                    weekdayDisplay.textContent = `所選日期為：${weekday}`;
+                } else {
+                    weekdayDisplay.textContent = ''; // 清除無效輸入的內容
+                }
+            });
+
+
+
+            // 在日期區間模式下，顯示選擇的完整範圍
+            dateRangeInput.addEventListener('input', () => {
+                const rangeValue = dateRangeInput.value;
+                const [startDate, endDate] = rangeValue.split(" to ").map(date => new Date(date.trim()));
+
+                if (!isNaN(startDate) && !isNaN(endDate)) { // 確保區間日期有效
+                    const startWeekday = weekdays[startDate.getDay()];
+                    const endWeekday = weekdays[endDate.getDay()];
+                    weekdayDisplay.textContent = `您選擇的範圍是：${startDate.toLocaleDateString()}（${startWeekday}） 至 ${endDate.toLocaleDateString()}（${endWeekday}）`;
+                } else {
+                    weekdayDisplay.textContent = ''; // 清除無效輸入的內容
+                }
+            });
+
+        });
+
+        const serviceSelect = document.querySelector(".form-select.custom-select");
+        const singleDateInput = document.querySelector("#appointment-date");
+        const dateRangePickerContainer = document.querySelector(".date-range-picker");
+        const dateRangeInput = document.querySelector("#appointment-range");
+        const weekdayDisplay = document.querySelector("#weekday-display");
+
+        // 初始化日期區間選擇器111
+        const initDateRangePicker = () => {
+            const weekdays = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+
+            flatpickr(dateRangeInput, {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                minDate: "today",
+                onChange: (selectedDates) => {
+                    if (selectedDates.length === 2) {
+                        const startDate = selectedDates[0];
+                        const endDate = selectedDates[1];
+
+                        const startWeekday = weekdays[startDate.getDay()];
+                        const endWeekday = weekdays[endDate.getDay()];
+
+                        const startDateFormatted = `${startDate.getFullYear()}/${startDate.getMonth() + 1}/${startDate.getDate()}(${startWeekday})`;
+                        const endDateFormatted = `${endDate.getFullYear()}/${endDate.getMonth() + 1}/${endDate.getDate()}(${endWeekday})`;
+
+                        weekdayDisplay.textContent = `您選擇的區間是：${startDateFormatted} to ${endDateFormatted}`;
+                    } else {
+                        weekdayDisplay.textContent = "請選擇完整的區間。";
+                    }
+                },
+            });
+        };
+
+
+        serviceSelect.addEventListener("change", () => {
+            const selectedService = serviceSelect.value;
+            if (selectedService === "住宿服務") {
+                // 切換到日期區間模式
+                singleDateInput.classList.add("d-none");
+                dateRangePickerContainer.classList.remove("d-none");
+                initDateRangePicker();
+            } else if (selectedService === "美容服務") {
+                // 切換到單日期模式
+                singleDateInput.classList.remove("d-none");
+                dateRangePickerContainer.classList.add("d-none");
+                initSingleDatePicker();
+            }
+        });
+
+        initSingleDatePicker();
+
+
+
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            flatpickr('.datepicker', {
+                dateFormat: "Y-m-d", // 格式化日期
+                minDate: "today", // 禁用過去的日期
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const phoneInput = document.getElementById('phoneInput');
+            const message = document.getElementById('message');
+            const sendButton = document.getElementById('sendButton');
+
+            phoneInput.addEventListener('input', () => {
+                const value = phoneInput.value;
+                const regex = /^09\d{8}$/;
+
+                if (!value) {
+                    message.textContent = '';
+                    sendButton.disabled = true;
+                    return;
+                }
+
+                if (!regex.test(value)) {
+                    message.textContent = '格式錯誤，請輸入09xxxxxxxx';
+                    message.className = 'error-message';
+                    sendButton.disabled = true;
+                } else {
+                    message.textContent = '輸入正確';
+                    message.className = 'success-message';
+                    sendButton.disabled = false;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readInfoCheckbox = document.getElementById('readInfoCheckbox');
+            const submitButton = document.getElementById('submitButton');
+
+            // 監聽核取方塊狀態變化
+            readInfoCheckbox.addEventListener('change', () => {
+                submitButton.disabled = !readInfoCheckbox.checked;
+            });
+
+            // 表單提交事件（可選）
+            const form = document.getElementById('appointment-form');
+            form.addEventListener('submit', (event) => {
+                if (!readInfoCheckbox.checked) {
+                    event.preventDefault(); // 防止提交表單
+                    alert('請先閱讀並同意注意事項。');
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+
+</html>
