@@ -55,9 +55,8 @@
                 </button>
                 <div class="justify-content-start collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-4">
-                        <li class="nav-item"><a class="nav-link" href="官網.html">首頁</a></li>
-                        <li class="nav-item"><a class="nav-link" href="寵物旅館.html">寵物旅館</a></li>
-                        <li class="nav-item"><a class="nav-link" href="寵物美容.html">寵物美容</a></li>
+                        <li class="nav-item"><a class="nav-link" href="firstPage.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">寵物服務</a></li>
                         <li class="nav-item"><a class="nav-link" href="Q&A.html">Q & A</a></li>
                     </ul>
                 </div>
@@ -115,93 +114,60 @@
                 <h1 class="display-4 fw-bold">毛孩的溫馨旅館</h1>
                 <p class="lead">為您的毛孩提供住宿服務，專業與愛心的守護。</p>
                 <a href="#appointment" class="btn btn-custom btn-md me-2">立即預約</a>
-                <a href="#intro-v" class="btn btn-custom btn-md me-2">房型介紹</a>
+                <a href="#intro-b" class="btn btn-custom btn-md me-2">寵物住宿</a>
+                <a href="#intro-v" class="btn btn-custom btn-md me-2">寵物美容</a>
             </div>
         </div>
     </section>
-
-
-    <!-- Form Section -->
-    <div class="container my-5" id="appointment">
-        <div class="row align-item-center g-4 form-custom">
-            <div class="col-12 col-md-6 me-auto fade-in">
-                <form class="form-section">
-                    <!-- 預約服務項目 -->
-                    <h3>預約服務項目</h3>
-                    <select class="form-select custom-select">
-                        <option selected disabled>請選擇</option>
-                        <option>美容服務</option>
-                        <option>住宿服務</option>
-                    </select>
-                    <br>
-                    <h3 class="form-title">預約日期</h3>
-                    <div class="form-group">
-                        <label for="appointment-date" class="form-title d-flex align-items-center">
-                        </label>
-                        <input placeholder="請選擇日期" type="date" id="appointment-date"
-                            class="form-control custom-input datepicker">
-                    </div>
-                    <!-- 日期區間 -->
-                    <div class="form-group date-range-picker d-none">
-                        <label for="appointment-range" class="form-title">選擇日期區間</label>
-                        <input type="text" id="appointment-range" class="form-control custom-input" placeholder="選擇日期">
-                    </div>
-                    <small id="weekday-display" class="form-text text-muted my-2 "></small>
-                    <!-- 日期區間 -->
-                    <br>
-                    <h3 class="form-title mt-2">毛孩類型</h3>
-                    <select class="form-select custom-select">
-                        <option selected disabled>請選擇</option>
-                        <optgroup label="貓">
-                            <option>長毛貓</option>
-                            <option>短毛貓</option>
-                        </optgroup>
-                        <optgroup label="狗">
-                            <option>小型犬(1~8公斤)</option>
-                            <option>中型犬(8~15公斤)</option>
-                            <option>大型犬(15公斤以上)</option>
-                        </optgroup>
-                    </select>
-                    <br>
-                    <button class="btn btn-custom w-100" id="submitButton" disabled>送出</button>
-                    <div class="form-check mt-3 d-flex justify-content-center">
-                        <input type="checkbox" id="readInfoCheckbox" class="form-check-input">
-                        <label for="readInfoCheckbox" class="form-check-label ms-1">
-                            我已閱讀並同意<a href="" data-bs-target="#readInfo" data-bs-toggle="modal">注意事項</a>
-                        </label>
-                    </div>
-                    <div class="text-center mt-3">
-                        <small>預約請先閱讀<b>「 注意事項 」</b>，<br>預約後請與本店確認資訊，<br>以保障雙方權益。</small>
-                    </div>
-                </form>
-            </div>
-            <div class="modal fade" id="readInfo" tabindex="-1" aria-labelledby="readInfoLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-0">
-                            <img id="modalImage" class="img-fluid w-100" src="./icon_else/注意事項.png" alt="注意事項"
-                                style="cursor: zoom-in;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Service Section -->
-
     <!-- Gallery Section -->
     <section id="gallery" class="py-5">
         <div class="container">
-            <div class="rows" id="intro-v">
+            <div class="rows" id="intro-b">
                 <div class="item d-flex justify-content-center align-items-center ttl-about mb-5">
-                    <h3>房型介紹</h3>
+                    <h3>寵物住宿</h3>
+                </div>
+            </div>
+            <div class="container my-5">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">本店毛孩體重標準如下</h3>
+                    <p>(本店有備寵物用體重計)</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle table1">
+                        <thead class="">
+                            <tr>
+                                <th></th>
+                                <th>小型犬</th>
+                                <th>中型犬</th>
+                                <th>大型犬</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./icon_else/dog_icon.png" alt="dog" style="width: 50px;">
+                                    <p class="fw-bold mb-0">狗狗</p>
+                                </td>
+                                <td>
+                                    1 - 8 kg
+                                </td>
+                                <td>
+                                    8 - 15 kg
+                                </td>
+                                <td>
+                                    15 kg以上
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="row g-3 mb-5 des-row-custom">
+                <div class="rows" id="intro-b">
+                    <div class="item d-flex justify-content-center align-items-center ttl-about mb-5">
+                        <h3>房型介紹</h3>
+                    </div>
+                </div>
                 <div class="col-12 mb-3">
                     <div class="row">
                         <div class="col-6 d-flex justify-content-center">
@@ -304,6 +270,69 @@
 
         </div>
     </div>
+
+        <div class="container" id="standard">
+        <div class="rows" id="intro-v">
+            <div class="item d-flex justify-content-center align-items-center ttl-about mb-5 mt-5">
+                <h3>美容服務</h3>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="text-center mb-4 bg-light p-2" style="border-radius: 20px;">
+                <h5 class="fw-bold">收費說明 (依據現場報價為主)</h5>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center align-middle table-custom">
+                    <thead class="">
+                        <tr>
+                            <th></th>
+                            <th>小美容</th>
+                            <th>大美容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 貓咪 Row -->
+                        <tr>
+                            <td class="mt-5">
+                                <img src="./icon_else/cat_icon.png" alt="Cat" style="width: 50px;">
+                                <p class="fw-bold mb-0">貓咪</p>
+                            </td>
+                            <td>
+                                $600 元起
+                            </td>
+                            <td>
+                                $1200 元起
+                            </td>
+                        </tr>
+                        <!-- 狗狗 Row -->
+                        <tr>
+                            <td class="mt-5">
+                                <img src="./icon_else/dog_icon.png" alt="Dog" style="width: 50px;">
+                                <p class="fw-bold mb-0">狗狗</p>
+                            </td>
+                            <td>
+                                小型犬 $400 元起<br>
+                                中型犬 $700 元起<br>
+                                大型犬 $1,200 元起
+                            </td>
+                            <td>
+                                小型犬 $800 元起<br>
+                                中型犬 $1,400 元起<br>
+                                大型犬 $2,400 元起
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <a href="firstPage.html" class="btn btn-custom btn-md" style="width: 150px;">回首頁預約</a>
+        </div>
+    </div>
+
+
+
     <div class="container">
         <div class="rows">
             <div class="item d-flex justify-content-center align-items-center ttl-about mb-5 mt-5">
@@ -373,8 +402,8 @@
                         </div>
                         <div class="col-12 mt-4">
                             <p class="footer-section-title">相關服務</p>
-                            <a href="寵物美容.html" class="footer-link d-block">寵物美容</a>
-                            <a href="寵物住宿.html" class="footer-link d-block">寵物住宿</a>
+                            <a href="service.html" class="footer-link d-block">寵物服務</a>
+                            <a href="Q&A.html" class="footer-link d-block">Q & A</a>
                         </div>
 
                     </div>
