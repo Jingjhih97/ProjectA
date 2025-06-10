@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./美化.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.21/dist/fancybox.css">
     <link rel="icon" href="./logo透明底/標準色Logo1.png">
 </head>
 
@@ -60,18 +61,16 @@
                         <li class="nav-item"><a class="nav-link" href="Q&A.html">Q & A</a></li>
                     </ul>
                 </div>
-                
-                
+
+
             </div>
             <div class="me-2 d-none d-lg-block">
                 <ul class="navbar-nav d-flex text-align-items-center">
                     <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/lujandaopet/posts/"
-                            target="_blank"><img src="./icon_else/icons-instagram.png" class="navbar-icon"
-                                alt=""></a>
+                            target="_blank"><img src="./icon_else/icons-instagram.png" class="navbar-icon" alt=""></a>
                     </li>
                     <li><a class="nav-link" href="https://www.facebook.com/profile.php?id=61566735456756#"
-                            target="_blank"><img src="./icon_else/icons-facebook-50.png" class="navbar-icon"
-                                alt=""></a>
+                            target="_blank"><img src="./icon_else/icons-facebook-50.png" class="navbar-icon" alt=""></a>
                     </li>
                     <li class="nav-item"><a class="nav-link" data-bs-target="#loginModal" data-bs-toggle="modal"
                             href="#"><img src="./icon_else/login-icon.png" class="navbar-icon" alt=""></a></li>
@@ -111,8 +110,8 @@
         <!-- Hero Content Section -->
         <div class="hero-content-wrapper">
             <div class="hero-content">
-                <h1 class="display-4 fw-bold">毛孩的溫馨旅館</h1>
-                <p class="lead">為您的毛孩提供住宿服務，專業與愛心的守護。</p>
+                <h1 class="display-4 fw-bold">綠棧道美容旅館</h1>
+                <p class="lead">為您的毛孩提供住宿及美容服務，<br>專業與愛心的守護，<br>讓毛孩們盡情釋放魅力。</p>
                 <a href="#appointment" class="btn btn-custom btn-md me-2">立即預約</a>
                 <a href="#intro-b" class="btn btn-custom btn-md me-2">寵物住宿</a>
                 <a href="#intro-v" class="btn btn-custom btn-md me-2">寵物美容</a>
@@ -170,10 +169,10 @@
                 </div>
                 <div class="col-12 mb-3">
                     <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-                            <img src="環境及設備/貓房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        <div class="col-6 d-flex justify-content-center photo-wrapper">
+                            <img src="環境及設備/貓房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1" onclick="openModal('./環境及設備/貓房.jpg')">
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
+                        <div class="col-6 d-flex justify-content-center fade-in">
                             <div class="item gallery-item">
                                 <h5 class="mb-3">
                                     <貓咪房>
@@ -190,7 +189,7 @@
             <div class="row g-3 mb-5 des-row-custom ">
                 <div class="col-12 mb-3">
                     <div class="row mt-4">
-                        <div class="col-6 d-flex justify-content-center">
+                        <div class="col-6 d-flex justify-content-center fade-in">
                             <div class="item gallery-item">
                                 <h5 class="mb-3">
                                     <中小型犬房>
@@ -202,8 +201,8 @@
                                 <p><b>房間數量</b>：<br> 8 間</p>
                             </div>
                         </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img src="./環境及設備/犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        <div class="col-6 d-flex align-items-center photo-wrapper">
+                            <img src="./環境及設備/犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1" onclick="openModal('./環境及設備/犬房.jpg')">
                         </div>
                     </div>
                 </div>
@@ -212,17 +211,17 @@
             <div class="row g-3 mb-5 des-row-custom">
                 <div class="col-12 mb-3">
                     <div class="row mt-4">
-                        <div class="col-6 d-flex justify-content-center">
-                            <img src="./環境及設備/大型犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+                        <div class="col-6 d-flex justify-content-center photo-wrapper">
+                            <img src="./環境及設備/大型犬房.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1" onclick="openModal('./環境及設備/大型犬房.jpg')">
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
+                        <div class="col-6 d-flex justify-content-center fade-in">
                             <div class="item gallery-item">
                                 <h5 class="mb-3">
                                     <大型犬房>
                                 </h5>
                                 <p><b>房型特色</b>：<br>本店最大房間適合大型犬，待在房間也能跑跑跳跳。</p>
                                 <p><b>房間價格</b>：<br>1000/晚</p>
-                                    <hr><b>安親</b>：<br>大型犬：500元起/4hr後<br>每小時+100<br><br>
+                                <hr><b>安親</b>：<br>大型犬：500元起/4hr後<br>每小時+100<br><br>
                                 <p><b>房間數量</b>：<br> 1 間</p>
                             </div>
                         </div>
@@ -241,14 +240,14 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-12 text-center notify-custom">
+            <div class="col-12 text-center notify-custom fade-in">
                 <div class="div">
                     <h5>加購服務</h5>
                 </div>
                 <hr style="width: auto;">
                 <div class="div my-4">滴藥、擦藥及手動餵藥，貓咪50元(日)，狗狗30元(日)。</div>
             </div>
-            <div class="col-12 text-center notify-custom">
+            <div class="col-12 text-center notify-custom fade-in">
                 <div>
                     <h5>其他優惠</h5>
                 </div>
@@ -260,7 +259,7 @@
                 <p class="my-4">入住10天享95折、20天9折、30天以上85折優惠。</p>
             </div>
 
-            <div class="col-12 notify-custom mb-5 text-center">
+            <div class="col-12 notify-custom mb-5 text-center fade-in">
                 <div>
                     <h5>其他注意事項</h5>
                 </div>
@@ -271,7 +270,7 @@
         </div>
     </div>
 
-        <div class="container" id="standard">
+    <div class="container" id="standard">
         <div class="rows" id="intro-v">
             <div class="item d-flex justify-content-center align-items-center ttl-about mb-5 mt-5">
                 <h3>美容服務</h3>
@@ -327,7 +326,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <a href="firstPage.html" class="btn btn-custom btn-md" style="width: 150px;">回首頁預約</a>
+            <a href="firstPage.html" class="btn btn-custom btn-md" style="width: 150px;"><b>回首頁預約</b></a>
         </div>
     </div>
 
@@ -340,21 +339,48 @@
             </div>
         </div>
 
+        <div class="row fade-in d-flex justify-content-center">
+            <div class="col-12 col-md-3">
+                
+            </div>
+            <div class="col-12 col-md-6 notify-custom fw-bold ms-2 mb-5" style="width: 500px;">
+                <div class="item">
+                    <p>我們為您的毛小孩打造了一個安心的旅居環境，提供舒適的遊玩空間，讓毛孩可以盡情玩耍。<br>
+                        環境中播放輕柔的音樂，幫助舒緩情緒，營造如家的氛圍。<br><br>
+                        同時，全館配備 24 小時運行的高效空氣清淨機與房內空氣循環系統，確保空氣清新流通，守護寵物的健康。<br><br>
+                        每間房間均設有獨立攝影機，家長們可以隨時透過手機或電腦觀看愛寵的即時狀況，享受無憂的陪伴體驗。
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="row g-4 d-flex justify-content-center">
             <div class="col-6 col-md-2 photo-wrapper">
-                <img src="./環境及設備/室內1 .jpg" class="img-fluid rounded gallery-img" alt="環境照片1">
+                <img src="./環境及設備/室內1 .jpg" class="img-fluid rounded gallery-img" alt="環境照片1"
+                    onclick="openModal('./環境及設備/室內1 .jpg')">
             </div>
             <div class="col-6 col-md-2 photo-wrapper">
-                <img src="./環境及設備/室內2.jpg" class="img-fluid rounded gallery-img" alt="環境照片2">
+                <img src="./環境及設備/室內2.jpg" class="img-fluid rounded gallery-img" alt="環境照片2"
+                    onclick="openModal('./環境及設備/室內2.jpg')">
             </div>
             <div class="col-6 col-md-2 photo-wrapper">
-                <img src="./環境及設備/室內3.jpg" class="img-fluid rounded gallery-img" alt="環境照片3">
+                <img src="./環境及設備/室內3.jpg" class="img-fluid rounded gallery-img" alt="環境照片3"
+                    onclick="openModal('./環境及設備/室內3.jpg')">
             </div>
             <div class="col-6 col-md-2 photo-wrapper">
-                <img src="./環境及設備/室內4.jpg" class="img-fluid rounded gallery-img" alt="環境照片4">
+                <img src="./環境及設備/室內4.jpg" class="img-fluid rounded gallery-img" alt="環境照片4"
+                    onclick="openModal('./環境及設備/室內4.jpg')">
             </div>
             <div class="col-6 col-md-2 photo-wrapper">
-                <img src="./環境及設備/室內5.jpg" class="img-fluid rounded gallery-img" alt="環境照片5">
+                <img src="./環境及設備/室內5.jpg" class="img-fluid rounded gallery-img" alt="環境照片5"
+                    onclick="openModal('./環境及設備/室內5.jpg')">
+            </div>
+        </div>
+
+        <!-- 模態視窗 -->
+        <div id="imageModal" class="modal_env">
+            <div class="modal-content-env">
+                <button class="close-btn" onclick="closeModal()">×</button>
+                <img id="modalImage" src="" alt="預覽圖片">
             </div>
         </div>
     </div>
@@ -593,11 +619,37 @@
         });
     </script>
 
+    <script>
+        // 打開模態視窗
+        function openModal(imageSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = imageSrc;
+            modal.style.display = "flex"; // 顯示模態視窗
+        }
+
+        // 關閉模態視窗
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none"; // 隱藏模態視窗
+        }
+
+        // 點擊模態視窗外部時關閉
+        window.onclick = function (event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
 
 
 
 
     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.21/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
