@@ -243,11 +243,12 @@ body {
 .cimg-custom {
     width: 270px;
     height: auto;
-    margin-left: 65px;
     margin-top: 10px;
     border-radius: 20px;
     border: solid 5px #9aa78a;
     object-fit: cover;
+    display: block;
+    margin: 10px auto;
 }
 
 .cbtn-custom {
@@ -774,3 +775,4 @@ body {
     display: flex;
     justify-content: center;
 }
+
